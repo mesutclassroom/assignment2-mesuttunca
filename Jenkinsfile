@@ -1,5 +1,5 @@
 pipeline { 
-    agent 'M3'   
+    agent any  
     stages { 
         stage('Test') {
             steps {
