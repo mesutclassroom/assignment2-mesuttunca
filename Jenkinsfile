@@ -6,7 +6,7 @@ pipeline {
     stages { 
         stage('Test') {
             steps {
-                sh 'mvn -version'
+                sh 'mvn clean test'
             }
             post {
                 always {
