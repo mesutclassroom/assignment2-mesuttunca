@@ -10,7 +10,7 @@ pipeline {
             }
             post {
                 always {
-                    emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+                    emailext body: '${FILE,path="target/surefire-reports/test.AssignmentTest.txt"}', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Your assignment submission results'
                 }
             }
         }
